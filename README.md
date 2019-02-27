@@ -12,8 +12,9 @@ So, back to the repo; it contains two folders:
 Usage:  
 
 * `git clone https://gitlab.com/belerico/high-school-thesis.git` to locally clone the repo
+* Enter Modulation or Simplex folder
 * `javac *.java` for compiling
-* `java Modulation/SignalDrawer`
+* `java SignalDrawer` or `java LPSolverGUI` depending on the choosen folder
 
 See ya!
 
