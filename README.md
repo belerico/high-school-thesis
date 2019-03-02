@@ -6,9 +6,15 @@ All of the code you view it was written using JCreator (free edition of course),
 Maybe one day i'll comment over the entire project.  
 So, back to the repo; it contains two folders:
 
-* Modulation: it draws modulated signals choosen by the user.
-* Simplex: it resolves linear programming problems specified by the user using the simplex algorithm. The algorithm used in this project was developed not properly knowing what i was doing, in fact all the mathematics involved in it was perfectioned in university.  
+* Modulation: it draws electronic signals choosen by the user.
+* Simplex: it resolves linear programming problems specified by the user using the simplex algorithm. The algorithm used in this project is based on the lecture notes from my old high school mathematics teacher: call it a "simplified" version of the actual simplex algorithm, less theoretical and more practical; in fact all the mathematic involved in it will be perfectioned in university.  
 
+Usage:  
+
+* `git clone https://gitlab.com/belerico/high-school-thesis.git` to locally clone the repo
+* Enter Modulation or Simplex folder
+* `javac *.java` for compiling
+* `java SignalDrawer` or `java LPSolverGUI` depending on the choosen folder
 
 See ya!
 
