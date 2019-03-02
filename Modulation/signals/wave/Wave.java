@@ -19,7 +19,9 @@ public abstract class Wave extends Signal{
 		return index;
 	}
 	public Wave(double frequency, double amplitude, int nSin, boolean isOdd) throws IllegalArgumentException{
-		super(frequency, amplitude, 0);
+		super(frequency, amplitude, 0);		
+		if (!isOdd) 
+			this.setInitPhase(90);		
 		this.isOdd = isOdd;
 		this.initSinusoids(this.checkNSin(nSin));
 	}
