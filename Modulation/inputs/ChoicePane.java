@@ -59,7 +59,7 @@ public class ChoicePane extends JPanel{
 	}
 	public ChoicePane() {
 		super.setLayout(new BorderLayout());
-		super.add(this.getTitlePane("Scegliere il segnale che si vuole disegnare", 0, 30), BorderLayout.NORTH);
+		super.add(this.getTitlePane("Choose a signal you want to draw", 0, 30), BorderLayout.NORTH);
 		JPanel choice = new JPanel();
 		choice.setLayout(new GridLayout(3, 1, 0, 0));
 		choice.add(this.getPane("MATHEMATICAL CURVES", new String[] {"Sinusoid", "Cosinusoid"}, 1, 2, 0, 0));

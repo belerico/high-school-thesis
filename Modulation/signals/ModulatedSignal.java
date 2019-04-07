@@ -34,6 +34,6 @@ public abstract class ModulatedSignal extends Signal{
 		       "Frequency: " + this.frequency + " Hz\n" +
 		       "Angular frequency: " + f.format(this.getAngularFrequency()) + " rad/s\n" +
 		       "Period: " + f.format((super.getPeriod() * 1000)) + " ms\n" +
-		       "Initial phase: " + f.format(this.getDegInitPhase()) + " deg";
+		       "Phase: " + f.format(this.getDegInitPhase()) + " deg";
     }
 }

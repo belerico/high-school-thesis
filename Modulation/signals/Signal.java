@@ -6,7 +6,7 @@ public abstract class Signal {
 
 	protected double frequency;	//Signal frequency in Hz
 	protected double amplitude;	//Signal amplitude in Volt
-	protected double initPhase;	//Signal initial phase in radians
+	protected double initPhase;	//Signal Phase in radians
 	
     public Signal(double frequency, double amplitude, double degInitPhase) throws IllegalArgumentException{	//degInitPhase parameter specifies the initial angle phase in degrees
     	this.setFrequency(frequency);
@@ -67,7 +67,7 @@ public abstract class Signal {
     		   "Frequency: " + this.frequency + " Hz\n" +
     		   "Angular frequency: " + f.format(this.getAngularFrequency()) + " rad/s\n" +
     		   "Period: " + f.format((this.getPeriod() * 1000)) + " ms\n" +
-    		   "Initial phase: " + f.format(this.getDegInitPhase()) + " deg";
+    		   "Phase: " + f.format(this.getDegInitPhase()) + " deg";
     }
     public abstract Signal copy();
 

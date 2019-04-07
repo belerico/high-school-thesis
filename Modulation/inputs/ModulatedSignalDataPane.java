@@ -71,8 +71,8 @@ public class ModulatedSignalDataPane extends JPanel {
 		return pane;
 	}
     public ModulatedSignalDataPane(String signalType) {
-    	super.add(this.getTitlePane(new JLabel("Inserire i dati relativi a modulante e portante"), 60, (signalType.equals("AM")) ? 30 : 10), BorderLayout.NORTH);
-    	super.add(this.getFinalPane(signalType, new String[] {"Modulante","Frequenza:","Ampiezza:","Portante","Frequenza:","Ampiezza:"}));
+    	super.add(this.getTitlePane(new JLabel("Fill data about modulating and carrier signals"), 60, (signalType.equals("AM")) ? 30 : 10), BorderLayout.NORTH);
+    	super.add(this.getFinalPane(signalType, new String[] {"Modulating","Frequency:","Amplitude:","Carrier","Frequency:","Amplitude:"}));
     }
     public String getData() {
     	String data = "";

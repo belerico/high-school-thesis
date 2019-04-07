@@ -47,7 +47,7 @@ public class FMModulatedSignal extends ModulatedSignal{
 		       "t: " + t + "\n" + 
 		       "Frequency(t): " + f.format(this.getFrequency(t)) + " Hz\n" + 
 		       "Angular frequency: " + f.format(this.getAngularFrequency(t)) + " rad/s\n" +
-		       "Initial phase: " + this.getDegInitPhase() + " deg";
+		       "Phase: " + this.getDegInitPhase() + " deg";
     }
     private double getRandomTime() {
     	String period = "" + super.getPeriod();

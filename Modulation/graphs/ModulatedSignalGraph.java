@@ -34,9 +34,9 @@ public class ModulatedSignalGraph extends JPanel{
     	double period = Math.max(info.getPeriod(), load.getPeriod());
     	double amplitude = (s instanceof AMModulatedSignal) ? s.getAmplitude() : Math.max(info.getAmplitude(), load.getAmplitude());
 		super.setLayout(new GridLayout(3, 1, 0, 5));
-		super.add(this.getTitledGraphPane(new SignalGraph(info, density, periodsToDraw, period, amplitude), "MODULANTE"));
+		super.add(this.getTitledGraphPane(new SignalGraph(info, density, periodsToDraw, period, amplitude), "Modulating"));
 		info = null;
-		super.add(this.getTitledGraphPane(new SignalGraph(load, density, periodsToDraw, period, amplitude), "PORTANTE"));
+		super.add(this.getTitledGraphPane(new SignalGraph(load, density, periodsToDraw, period, amplitude), "Carrier"));
 		load = null;
 		super.add(this.getTitledGraphPane(new SignalGraph(s, density, periodsToDraw, period, amplitude), "SEGNALE MODULATO"));
 		s = null;	

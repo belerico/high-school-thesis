@@ -18,7 +18,7 @@ public class SignalDataPane extends JPanel {
 											null
 										};
 	private ButtonGroup group = null;
-	private String type = "Pari";
+	private String type = "Even";
 
 	private JPanel getTitlePane(JLabel l, int hGap, int vGap) {
 		JPanel titlePane = new JPanel();
@@ -43,13 +43,13 @@ public class SignalDataPane extends JPanel {
 			JPanel p = new JPanel();
 			JRadioButton btn = null;
 			this.group = new ButtonGroup();
-			btn = new JRadioButton("Pari", true);
-			btn.setActionCommand("Pari");
+			btn = new JRadioButton("Even", true);
+			btn.setActionCommand("Even");
 			btn.setFont(this.font);
 			this.group.add(btn);
 			p.add(btn);
-			btn = new JRadioButton("Dispari");
-			btn.setActionCommand("Dispari");
+			btn = new JRadioButton("Odd");
+			btn.setActionCommand("Odd");
 			btn.setFont(this.font);
 			this.group.add(btn);
 			p.add(btn);
@@ -67,18 +67,18 @@ public class SignalDataPane extends JPanel {
 		JPanel p = null;
 		int vGap = 40, length = signalType.length();
 		if (signalType.substring(length - 4, length).equals("wave")) {
-			p = this.getPane(new JLabel("N. sinusoidi:"), this.inputs[2] = new NumberTextField(15, "^[1-9]\\d{0,4}?$"), 4, 10);
+			p = this.getPane(new JLabel("N. sinusoids:"), this.inputs[2] = new NumberTextField(15, "^[1-9]\\d{0,4}?$"), 4, 10);
 			if (signalType.equals("Sawtooth wave"))
 				vGap = 50;
 		}
 		else {
 			vGap = 50;
-			p = this.getPane(new JLabel("Fase:"), this.inputs[2] = new NumberTextField(15, "^-?((0(\\.\\d{0,2})?)|([1-9]\\d{0,8}(\\.\\d{0,2})?)?)$"), 44, 10);
+			p = this.getPane(new JLabel("Phase:"), this.inputs[2] = new NumberTextField(15, "^-?((0(\\.\\d{0,2})?)|([1-9]\\d{0,8}(\\.\\d{0,2})?)?)$"), 44, 10);
 		}
     	super.add(this.getTitlePane(new JLabel("Inserire i dati relativi al segnale"), 0, vGap), BorderLayout.NORTH);
     	super.add(this.getSignalDataContainerPane	(	signalType,
-														this.getPane(new JLabel("Frequenza:"), this.inputs[0], 8, 10),
-														this.getPane(new JLabel("Ampiezza:"), this.inputs[1], 13, 10),
+														this.getPane(new JLabel("Frequency:"), this.inputs[0], 8, 10),
+														this.getPane(new JLabel("Amplitude:"), this.inputs[1], 13, 10),
 														p
 													), BorderLayout.CENTER);
 		p = null;
@@ -112,6 +112,6 @@ public class SignalDataPane extends JPanel {
 		return true;
 	}
 	public boolean isOdd() {
-		return (this.group.getSelection().getActionCommand().equals("Pari")) ? false : true;
+		return (this.group.getSelection().getActionCommand().equals("Even")) ? false : true;
 	}
 }
